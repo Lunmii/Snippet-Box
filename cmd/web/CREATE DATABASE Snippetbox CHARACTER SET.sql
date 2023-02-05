@@ -1,6 +1,6 @@
 CREATE DATABASE Snippetbox CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 -- Switch to using the `Snippetbox` database.
-USE snippetbox;
+USE Snippetbox;
 
 CREATE TABLE Snippets (
 id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
