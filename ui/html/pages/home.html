@@ -1,4 +1,5 @@
 {{define "title"}}Home{{end}}
+
 {{define "main"}}
     <h2>Latest Snippets</h2>
     {{if .Snippets}}
@@ -12,31 +13,12 @@
         {{range .Snippets}}
         <tr>
             <td><a href='/snippet/view?id={{.ID}}'>{{.Title}}</a></td>
-            <td>{{.Created}}</td>
+            <td>{{humanDate.Created}}</td>
             <td>#{{.ID}}</td>
         </tr>
         {{end}}
-
     </table>
     {{else}}
         <p>There's nothing to see here...yet!</p>
     {{end}}
-{{end}}
-<html lang="en">
-    <head>
-        <meta charset="uf-8">
-        <title>Home - Snippetbox</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Snippetbox</a></h1>
-        </header>
-        <main>
-            {{define "main"}}
-            <h2>Latest Snippets</h2>
-            <p>There's nothing to see here yet!</p>
-        </main>
-        <footer>Powered by <a href="https://golang.org/">Go</a></footer>
-    </body>
-</html>
 {{end}}
