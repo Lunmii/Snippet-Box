@@ -37,7 +37,7 @@ func main() {
 	templateCache, err := newTemplateCache()
 	if err != nil {
 		errorLog.Fatal(err)
-	}
+	}w.Write([]byte("Display the form for creating a new snippet..."))
 
 	app := &application{
 		errorLog:      errorLog,
